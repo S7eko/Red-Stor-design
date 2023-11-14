@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> All Product -R edstore </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navber">
+            <div class="logo">
+                <img src="images/logo.png" alt="" width="125px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="prudact.html">Product</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="prudact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+
+                </ul>
+            </nav>
+            <img src="images/cart.png" alt="" width="30px" height="30px">
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+
+    </div>
+
+    <!-- account-page -->
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/image1.png" alt="">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="indicator">
+                        </div>
+                        <form id="loginForm">
+                            <input type="text" name="" id="" placeholder="Username">
+
+                            <input type="password" name="" id="" placeholder="password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forget Password</a>
+                        </form>
+
+                        <form id="regForm">
+                            <input type="text" name="" id="" placeholder="Username">
+                            <input type="email" name="" id="" placeholder="email">
+
+                            <input type="password" name="" id="" placeholder="password">
+                            <button type="submit" class="btn">Register</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- ---------------footer------------------- -->
+    <div class="footer">
+        <div class="conitaner">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Dawnload Our App</h3>
+                    <p>Dawnlod App for Android And ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png" alt="">
+                        <img src="images/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png" alt="">
+                    <p>Our puroose Is To Sustainably Make the pleasure <br> And Benefits of sports Accessible to the
+                        many.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Linkes</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follw Us</h3>
+                    <ul>
+                        <li>facebook</li>
+                        <li>Twitter</li>
+                        <li>Linked in</li>
+                        <li>Whats App</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2023 - Easy Tutorials </p>
+        </div>
+    </div>
+
+
+
+    <!-- js -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems")
+
+        MenuItems.style.maxHeight = "0px"
+
+        function menutoggle() {
+
+            if (MenuItems.style.maxHeight == "0px") {
+
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+
+    </script>
+
+    <script>
+        var loginForm = document.getElementById('loginForm');
+        var regForm = document.getElementById('regForm');
+        var indicator = document.getElementById('indicator');
+
+        function register() {
+            regForm.style.transform = "translateX(0px)";
+            loginForm.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(100px)";
+        }
+        function login() {
+            regForm.style.transform = "translateX(300px)";
+            loginForm.style.transform = "translateX(300px)";
+            indicator.style.transform = "translateX(0px)";
+        }
+
+
+    </script>
+
+</body>
+
+</html>
